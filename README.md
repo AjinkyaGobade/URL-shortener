@@ -1,308 +1,135 @@
-\# 🔗 URL Shortener – Full Stack Web Application
+URL Shortener – Full Stack Web Application
 
+A full stack URL Shortener application that converts long URLs into short, shareable links with fast redirection.
+Built using React, Node.js, and Express with a clean backend and responsive frontend.
 
+--------------------------------------------------
 
-A modern \*\*Full Stack URL Shortener\*\* application that converts long URLs into short, shareable links with fast redirection.  
+FEATURES
+- Convert long URLs into short URLs
+- Fast redirection to original URLs
+- REST API based architecture
+- Clean and responsive UI
+- Modular backend structure
+- Environment based configuration
 
-Built using \*\*React + Node.js + Express\*\* with a clean backend architecture and responsive frontend UI.
+--------------------------------------------------
 
+TECH STACK
 
+Frontend:
+- React (Vite)
+- Tailwind CSS
+- JavaScript
 
-This project demonstrates \*\*REST API design, MVC architecture, database integration, and frontend–backend communication\*\*.
+Backend:
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
 
+Tools:
+- Git & GitHub
+- Vercel
+- VS Code
 
+--------------------------------------------------
 
----
-
-
-
-\## ✨ Features
-
-
-
-\- 🔹 Convert long URLs into short URLs
-
-\- 🔹 Fast redirection to original URLs
-
-\- 🔹 RESTful API design
-
-\- 🔹 Clean and responsive UI
-
-\- 🔹 Modular backend architecture
-
-\- 🔹 Environment-based configuration
-
-\- 🔹 Production-ready folder structure
-
-
-
----
-
-
-
-\## 🛠️ Tech Stack
-
-
-
-\### Frontend
-
-\- React (Vite)
-
-\- Tailwind CSS
-
-\- JavaScript
-
-
-
-\### Backend
-
-\- Node.js
-
-\- Express.js
-
-\- MongoDB (Mongoose)
-
-
-
-\### Tools
-
-\- Git \& GitHub
-
-\- Vercel
-
-\- VS Code
-
-
-
----
-
-
-
-\## 📂 Project Structure
-
-
+PROJECT STRUCTURE
 
 URL-shortener/
+|
+|-- Backend/
+|   |-- src/
+|   |   |-- controllers/
+|   |   |-- routes/
+|   |   |-- models/
+|   |   |-- db/
+|   |   |-- utils/
+|   |   |-- config/
+|   |   |-- environment/
+|   |   |-- app.js
+|   |   |-- server.js
+|   |-- package.json
+|   |-- vercel.json
+|
+|-- Frontend/
+|   |-- src/
+|   |   |-- component/
+|   |   |-- Api/
+|   |   |-- App.jsx
+|   |   |-- main.jsx
+|   |   |-- index.css
+|   |-- index.html
+|   |-- package.json
+|   |-- vite.config.js
+|
+|-- README.md
 
-│
+--------------------------------------------------
 
-├── Backend/
+INSTALLATION AND SETUP
 
-│ ├── src/
-
-│ │ ├── controllers/
-
-│ │ ├── routes/
-
-│ │ ├── models/
-
-│ │ ├── db/
-
-│ │ ├── utils/
-
-│ │ ├── config/
-
-│ │ ├── environment/
-
-│ │ ├── app.js
-
-│ │ └── server.js
-
-│ ├── package.json
-
-│ └── vercel.json
-
-│
-
-├── Frontend/
-
-│ ├── src/
-
-│ │ ├── component/
-
-│ │ ├── Api/
-
-│ │ ├── App.jsx
-
-│ │ ├── main.jsx
-
-│ │ └── index.css
-
-│ ├── index.html
-
-│ ├── package.json
-
-│ └── vite.config.js
-
-│
-
-└── README.md
-
-
-
-yaml
-
-Copy code
-
-
-
----
-
-
-
-\## ⚙️ Installation \& Setup
-
-
-
-\### 1️⃣ Clone Repository
-
-```bash
-
+1. Clone the repository
 git clone https://github.com/AjinkyaGobade/URL-shortener.git
-
 cd URL-shortener
 
-2️⃣ Backend Setup
-
-bash
-
-Copy code
-
+2. Backend setup
 cd Backend
-
 npm install
 
-Create .env file inside Backend/:
-
-
-
-env
-
-Copy code
-
+Create a .env file inside Backend folder:
 PORT=5000
-
-MONGO\_URI=your\_mongodb\_connection\_string
-
-BASE\_URL=http://localhost:5000
+MONGO_URI=your_mongodb_connection_string
+BASE_URL=http://localhost:5000
 
 Start backend server:
-
-
-
-bash
-
-Copy code
-
 npm start
 
-3️⃣ Frontend Setup
-
-bash
-
-Copy code
-
+3. Frontend setup
 cd Frontend
-
 npm install
-
 npm run dev
 
-Open in browser:
-
-
-
-arduino
-
-Copy code
-
+Open browser at:
 http://localhost:5173
 
-🔄 How It Works
+--------------------------------------------------
 
-User enters a long URL
+HOW IT WORKS
 
+1. User enters a long URL
+2. Frontend sends request to backend API
+3. Backend generates a unique short code
+4. URL is stored in database
+5. Short URL redirects to original URL
 
+--------------------------------------------------
 
-Frontend sends request to backend API
+SAMPLE API ENDPOINTS
 
+POST  /api/url     - Generate short URL
+GET   /:shortId    - Redirect to original URL
 
+--------------------------------------------------
 
-Backend generates a unique short code
+FUTURE ENHANCEMENTS
 
+- User authentication
+- Custom short URLs
+- URL expiry feature
+- Click analytics
+- QR code generation
 
+--------------------------------------------------
 
-URL mapping is stored in the database
-
-
-
-Short URL redirects to the original URL
-
-
-
-📌 Sample API Endpoints
-
-Method	Endpoint	Description
-
-POST	/api/url	Generate short URL
-
-GET	/:shortId	Redirect to original URL
-
-
-
-📈 Future Enhancements
-
-User authentication
-
-
-
-Custom short URLs
-
-
-
-URL expiry feature
-
-
-
-Click analytics dashboard
-
-
-
-QR code generation
-
-
-
-🎯 Learning Outcomes
-
-REST API development
-
-
-
-MVC backend architecture
-
-
-
-Frontend–backend integration
-
-
-
-Environment variable handling
-
-
-
-Full-stack deployment workflow
-
-
-
-👤 Author
+AUTHOR
 
 Ajinkya Gobade
-
-Computer Science \& Engineering Student
-
+Computer Science Engineering Student
 Aspiring Software Engineer
-
-
 
 GitHub: https://github.com/AjinkyaGobade
 
+--------------------------------------------------
+
+If you like this project, give it a star on GitHub.
