@@ -32,41 +32,6 @@ Tools:
 - Vercel
 - VS Code
 
---------------------------------------------------
-
-PROJECT STRUCTURE
-
-URL-shortener/
-|
-|-- Backend/
-|   |-- src/
-|   |   |-- controllers/
-|   |   |-- routes/
-|   |   |-- models/
-|   |   |-- db/
-|   |   |-- utils/
-|   |   |-- config/
-|   |   |-- environment/
-|   |   |-- app.js
-|   |   |-- server.js
-|   |-- package.json
-|   |-- vercel.json
-|
-|-- Frontend/
-|   |-- src/
-|   |   |-- component/
-|   |   |-- Api/
-|   |   |-- App.jsx
-|   |   |-- main.jsx
-|   |   |-- index.css
-|   |-- index.html
-|   |-- package.json
-|   |-- vite.config.js
-|
-|-- README.md
-
---------------------------------------------------
-
 INSTALLATION AND SETUP
 
 1. Clone the repository
