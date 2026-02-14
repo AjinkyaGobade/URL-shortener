@@ -7,14 +7,14 @@ const shrinkUrl = async (req, res) => {
     const { url } = req.body;
 
     if (!url) {
-      return res.status(404).send(new ApiResponse(404, "enter valid URL"));
+      return res.status(404).send(new ApiResponse(404, null, "enter valid URL"));
     }
     let shortID = crypto.randomBytes(2).toString("hex");
 
     const exist = await Url.findOne({ shortID });
 
     while (exist) {
-      shortID = crypto.getRandomBytes(2).toString("hex");
+      shortID = crypto.randomBytes(2).toString("hex");
     }
 
     const createdUrl = await Url.create({
